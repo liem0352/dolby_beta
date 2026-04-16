@@ -42,6 +42,7 @@ import com.raincat.dolby_beta.view.proxy.*;
 import com.raincat.dolby_beta.view.proxy.configuration.*;
 import com.raincat.dolby_beta.view.setting.AboutView;
 import com.raincat.dolby_beta.view.setting.BeautyView;
+import com.raincat.dolby_beta.view.setting.RCBeautyView;
 import com.raincat.dolby_beta.view.setting.BlackView;
 import com.raincat.dolby_beta.view.setting.DexView;
 import com.raincat.dolby_beta.view.setting.FixCommentView;
@@ -261,6 +262,8 @@ public class SettingHook {
         proxyView.setBaseOnView(masterView);
         BeautyView beautyView = new BeautyView(context);
         beautyView.setBaseOnView(masterView);
+        RCBeautyView rcBeautyView = new RCBeautyView(context);
+        rcBeautyView.setBaseOnView(masterView);
         ResetModuleView resetModuleView = new ResetModuleView(context);
 
 
@@ -277,6 +280,7 @@ public class SettingHook {
         dialogRoot.addView(signSongSelfView);
         dialogRoot.addView(proxyView);
         dialogRoot.addView(beautyView);
+        dialogRoot.addView(rcBeautyView);
         dialogRoot.addView(resetModuleView);
 
         dialogRoot.addView(new AboutView(context));
